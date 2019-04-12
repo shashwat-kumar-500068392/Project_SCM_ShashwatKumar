@@ -68,6 +68,33 @@ void insert_new_node_end()
 
 
 
+void display()
+{
+    struct Node *temp;
+    temp=head;
+
+    cout<<"The SAP ID's are :"<<endl;
+    while(temp != NULL)
+    {
+        cout<<temp->sap<<"\t";
+        temp=temp->next;
+    }
+    cout<<endl;
+
+    temp=head;
+    cout<<"The Roll number's are :"<<endl;
+    while(temp != NULL)
+    {
+        cout<<temp->rollno<<"\t";
+        temp=temp->next;
+    }
+    cout<<endl;
+
+}
+
+
+
+
 int main()
 {
 	return 0;
