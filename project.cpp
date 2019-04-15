@@ -88,6 +88,7 @@ void display()
         cout<<temp->rollno<<"\t";
         temp=temp->next;
     }
+
     cout<<endl;
 
 }
@@ -97,5 +98,6 @@ void display()
 
 int main()
 {
+	cout<<endl;
 	return 0;
 }
