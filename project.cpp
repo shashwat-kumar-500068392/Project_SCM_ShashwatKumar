@@ -183,6 +183,174 @@ int noOfNodes()
 }
 
 
+
+
+void sort_list()
+{
+    struct Node *i;
+    struct Node *j;
+
+    for(i=head ; i->next != NULL ; i=i->next)
+    {
+        for(j=i->next ; j->next != NULL ; j=j->next)
+        {
+            if(i->rollno > j->rollno)
+            {
+                struct Node *temp;
+                temp = i;
+                i = j;
+                j = temp;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+void working_insert()
+{
+    do
+    {
+        cout<<"Give a numeric input according to the following scheme"<<endl;
+        cout<<"1  : to insert a new Student detail at the beginning of the list"<<endl;
+        cout<<"2  : to insert a new Student detail at the end of the list"<<endl;
+        cout<<"3  : to display the Student details"<<endl;
+        cout<<"4  : to exit"<<endl;
+
+
+        int input=0;
+        cin>>input;
+        cout<<"\n\n"<<endl;
+
+
+        while(input<1 || input>4)
+        {
+            cout<<"Kindly input a valid choice :"<<endl;
+            cin>>input;
+        }
+
+        switch(input)
+        {
+            case 1: insert_new_node_beg();
+            break;
+
+            case 2: insert_new_node_end();
+            break;
+
+            case 3: display();
+            break;
+
+            case 4: cout<<"exiting"<<endl;
+            return;
+        }
+
+    }while(1);
+
+
+}
+
+
+
+void working_delete()
+{
+    do
+    {
+        cout<<"Give a numeric input according to the following scheme"<<endl;
+        cout<<"1  : to delete a Student detail at the beginning of the list"<<endl;
+        cout<<"2  : to delete a Student detail at the end of the list"<<endl;
+        cout<<"3  : to delete a Student detail at the given location of the list"<<endl;
+        cout<<"4  : to display the Student details"<<endl;
+        cout<<"5  : to exit"<<endl;
+
+
+        int input=0;
+        cin>>input;
+        cout<<"\n\n"<<endl;
+
+
+        while(input<1 || input>5)
+        {
+            cout<<"Kindly input a valid choice :"<<endl;
+            cin>>input;
+        }
+
+        switch(input)
+        {
+            case 1: delete_beg();
+            break;
+
+            case 2: delete_end();
+            break;
+
+            case 3:delete_pos();
+            break;
+
+            case 4: display();
+            break;
+
+            case 5: cout<<"exiting"<<endl;
+            return;
+        }
+
+    }while(1);
+
+
+}
+
+void working_extra()
+{
+    do
+    {
+        cout<<"Give a numeric input according to the following scheme"<<endl;
+        cout<<"1  : to sort the given list"<<endl;
+        cout<<"2  : to find the number of nodes list"<<endl;
+        cout<<"3  : to display the Student details"<<endl;
+        cout<<"4  : to exit"<<endl;
+
+
+        int input=0;
+        cin>>input;
+        cout<<"\n\n"<<endl;
+
+
+        while(input<1 || input>4)
+        {
+            cout<<"Kindly input a valid choice :"<<endl;
+            cin>>input;
+        }
+
+        switch(input)
+        {
+            case 1: sort_list();
+            break;
+
+            case 2: noOfNodes();
+            break;
+
+            case 3: display();
+            break;
+
+            case 4: cout<<"exiting"<<endl;
+            return;
+        }
+
+    }while(1);
+}
+
+
+
+
+
+
+
+
+
+
 int main()
 {
 	cout<<endl;

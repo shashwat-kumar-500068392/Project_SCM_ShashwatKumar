@@ -1,0 +1,280 @@
+500068392@upes-500068392 MINGW64 ~
+$ cd  d:
+
+500068392@upes-500068392 MINGW64 /d
+$ mkdir Project_SCM-ShashwatKumar
+
+500068392@upes-500068392 MINGW64 /d
+$ cd Project_SCM-ShashwatKumar
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar
+$ git init
+Initialized empty Git repository in D:/Project_SCM-ShashwatKumar/.git/
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git remote add origin https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git remote -v
+origin  https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git (fetch)
+origin  https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git (push)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Empty File created(content to be added later)"
+[master (root-commit) 2c2bb64] Empty File created(content to be added later)
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 254 bytes | 50.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+warning: LF will be replaced by CRLF in project.cpp.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Empty program created"
+[master 687b938] Empty program created
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 9 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 337 bytes | 84.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   2c2bb64..687b938  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+warning: LF will be replaced by CRLF in project.cpp.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Struct Node, insert_new_node_beg(), insert_new_node_end() functions added"
+[master a9deeab] Struct Node, insert_new_node_beg(), insert_new_node_end() functions added
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 65 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 630 bytes | 157.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   687b938..a9deeab  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+warning: LF will be replaced by CRLF in project.cpp.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "void display() function added"
+[master a830350] void display() function added
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 27 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 461 bytes | 153.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   a9deeab..a830350  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+warning: LF will be replaced by CRLF in project.cpp.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in log.txt.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   log.txt
+        modified:   project.cpp
+
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git reset HEAD log.txt
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   project.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        log.txt
+
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Intermediate commit(of no use)"
+[master acf439a] Intermediate commit(of no use)
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 82.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   a830350..acf439a  master -> master
+
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp\
+>
+
+
+
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add project.cpp
+warning: LF will be replaced by CRLF in project.cpp.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "functions delete_beg(), delete_end() and delete_pos() added"
+[master eded610] functions delete_beg(), delete_end() and delete_pos() added
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 52 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 666 bytes | 222.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   acf439a..eded610  master -> master
+
+
