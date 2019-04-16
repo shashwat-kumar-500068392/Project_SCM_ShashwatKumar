@@ -94,6 +94,25 @@ void display()
 }
 
 
+
+
+int noOfNodes()
+{
+    struct Node *temp;
+    temp=head;
+    int n=0;
+    while(temp != NULL)
+    {
+        temp=temp->next;
+        n=n+1;
+    }
+    return n;
+}
+
+
+
+
+
 void delete_beg()
 {
     struct Node *temp;
@@ -147,6 +166,22 @@ void delete_pos()
     }
 
 }
+
+
+
+int noOfNodes()
+{
+    struct Node *temp;
+    temp=head;
+    int n=0;
+    while(temp != NULL)
+    {
+        temp=temp->next;
+        n=n+1;
+    }
+    return n;
+}
+
 
 int main()
 {
