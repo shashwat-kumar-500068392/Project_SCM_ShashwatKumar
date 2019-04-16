@@ -94,7 +94,59 @@ void display()
 }
 
 
+void delete_beg()
+{
+    struct Node *temp;
+    temp=head;
+    head =head->next;
+    free(temp);
+}
 
+
+void delete_end()
+{
+    struct Node *temp;
+    temp=head;
+
+    while(temp->next->next != NULL)
+    {
+        temp= temp->next;
+    }
+
+    struct Node *todel;
+    todel= temp->next;
+    temp->next = NULL;
+    free(todel);
+}
+
+
+void delete_pos()
+{
+    cout<<"Enter the position of the node to be deleted\n\n"<<endl;
+    int n;
+    cin>>n;
+    cout<<endl;
+    int x=noOfNodes();
+    if(n>x-1  || n<2)
+    {
+        cout<<"invalid option selected"<<endl;
+    }
+    else
+    {
+        struct Node *temp ;
+        temp =head;
+        int a=0;
+        while(a <= n)
+        {
+            temp =temp ->next;
+        }
+        struct Node *todel;
+        todel = temp->next;
+        temp->next = temp ->next->next;
+        free(todel);
+    }
+
+}
 
 int main()
 {
