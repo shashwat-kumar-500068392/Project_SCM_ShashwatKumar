@@ -348,6 +348,48 @@ void working_extra()
 
 
 
+void linked_list()
+{
+    do
+    {
+        cout<<"Give a numeric input according to the following scheme"<<endl;
+        cout<<"1  : to select options for inserting"<<endl;
+        cout<<"2  : to select options for deleting"<<endl;
+        cout<<"3  : to select options for extra functions"<<endl;
+        cout<<"4  : to exit"<<endl;
+
+
+        int input=0;
+        cin>>input;
+        cout<<"\n\n"<<endl;
+
+
+        while(input<1 || input>4)
+        {
+            cout<<"Kindly input a valid choice :"<<endl;
+            cin>>input;
+        }
+
+        switch(input)
+        {
+            case 1: working_insert();
+            break;
+
+            case 2: working_delete();
+            break;
+
+            case 3:working_extra();
+            break;
+
+            case 4: cout<<"exiting"<<endl;
+            return;
+        }
+
+    }while(1);
+}
+
+
+
 
 
 
