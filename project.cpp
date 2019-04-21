@@ -13,6 +13,13 @@ struct Node
 struct Node *head =NULL;
 
 
+struct node
+{
+    int info;
+    struct node *next;
+    struct node *prev;
+}*start;
+
 void insert_new_node_beg()
 {
     struct Node *new_node = new struct Node();
