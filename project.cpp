@@ -295,6 +295,47 @@ void add_after(int value, int pos)
 
 
 
+void delete_element(int value)
+{
+    struct node *tmp, *q;
+     /first element deletion/
+    if (start->info == value)
+    {
+        tmp = start;
+        start = start->next;
+        start->prev = NULL;
+        cout<<"Element Deleted"<<endl;
+        free(tmp);
+        return;
+    }
+    q = start;
+    while (q->next->next != NULL)
+    {
+        /Element deleted in between/
+        if (q->next->info == value)
+        {
+            tmp = q->next;
+            q->next = tmp->next;
+            tmp->next->prev = q;
+            cout<<"Element Deleted"<<endl;
+            free(tmp);
+            return;
+        }
+        q = q->next;
+    }
+     /last element deleted/
+    if (q->next->info == value)
+    {
+        tmp = q->next;
+        free(tmp);
+        q->next = NULL;
+        cout<<"Element Deleted"<<endl;
+        return;
+    }
+    cout<<"Element "<<value<<" not found"<<endl;
+}
+
+
 
 void working_insert()
 {
