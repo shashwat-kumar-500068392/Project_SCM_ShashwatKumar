@@ -689,6 +689,6 @@ void doubly_linked_list()
 
 int main()
 {
-	linked_list();
+        doubly_linked_list();
 	return 0;
 }
