@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//struct Node for singly linked list
 
 struct Node
 {
@@ -14,6 +15,7 @@ struct Node
 
 struct Node *head =NULL;
 
+// struct node for doubly linked list
 
 struct node
 {
@@ -22,7 +24,7 @@ struct node
     struct node *prev;
 }*start;
 
-
+//struct node_ for binary search tree
 
 struct node_
 {
@@ -31,6 +33,10 @@ struct node_
     struct node_ *right;
 }*root;
 
+
+/*
+The functions implementing the singly linked list start here
+*/
 
 
 
@@ -204,6 +210,12 @@ void sort_list()
         }
     }
 }
+
+
+
+/*
+Functions implementing doubly linked list start here
+*/
 
 
 
@@ -390,6 +402,9 @@ void reverse_()
 
 
 
+/*
+Functions implementing doubly linked list start here
+*/
 
 
 
@@ -668,6 +683,11 @@ void del(int item)
 
 
 
+/*
+Intermediate functions calling functions implementing linked list start here
+*/
+
+
 
 void working_insert()
 {
@@ -800,6 +820,10 @@ void working_extra()
 }
 
 
+/*
+Intermediate function calling functions implementing singly linked list start here
+*/
+
 void linked_list()
 {
     cout<<endl<<"----------------------------"<<endl;
@@ -845,6 +869,10 @@ void linked_list()
     }while(1);
 }
 
+
+/*
+Intermediate function calling functions implementing doubly linked list start here
+*/
 
 
 void doubly_linked_list()
@@ -927,6 +955,9 @@ void doubly_linked_list()
 
 
 
+/*
+Intermediate function calling functions implementing binary search tree start here
+*/
 
 
 
@@ -996,7 +1027,10 @@ void binary_search_tree()
 
 
 
-
+/*
+Function calling the functions implementing singly linked list, doubly 
+linked list and binary search tree start here
+*/
 
 
 
@@ -1041,6 +1075,10 @@ void ask_choice()
 }
 
 
+
+/*
+int main to run the program
+*/
 
 int main()
 {
