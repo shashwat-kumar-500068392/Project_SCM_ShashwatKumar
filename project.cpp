@@ -651,6 +651,110 @@ void case_c(node_ *par, node_ *loc)
 }
 
 
+void preorder(node_ *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+    }
+    if (ptr != NULL)
+    {
+        cout<<ptr->info<<"  ";
+        preorder(ptr->left);
+        preorder(ptr->right);
+    }
+}
+
+
+
+
+
+void inorder(node_ *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+    }
+    if (ptr != NULL)
+    {
+        inorder(ptr->left);
+        cout<<ptr->info<<"  ";
+        inorder(ptr->right);
+    }
+}
+
+
+
+void postorder(node_ *ptr)
+{
+    if (root == NULL)
+    {
+        cout<<"Tree is empty"<<endl;
+        return;
+    }
+    if (ptr != NULL)
+    {
+        postorder(ptr->left);
+        postorder(ptr->right);
+        cout<<ptr->info<<"  ";
+    }
+}
+
+
+
+
+
+void display_(node *ptr, int level)
+{
+    int i;
+    if (ptr != NULL)
+    {
+        display__(ptr->right, level+1);
+        cout<<endl;
+        if (ptr == root)
+            cout<<"Root->:  ";
+        else
+        {
+            for (i = 0;i < level;i++)
+                cout<<"       ";
+	}
+        cout<<ptr->info;
+        display__(ptr->left, level+1);
+    }
+}
+
+
+
+void del(int item)
+{
+    node_ *parent, *location;
+    if (root == NULL)
+    {
+        cout<<"Tree empty"<<endl;
+        return;
+    }
+    find(item, &parent, &location);
+    if (location == NULL)
+    {
+        cout<<"Item not present in tree"<<endl;
+        return;
+    }
+    if (location->left == NULL && location->right == NULL)
+        case_a(parent, location);
+    if (location->left != NULL && location->right == NULL)
+        case_b(parent, location);
+    if (location->left == NULL && location->right != NULL)
+        case_b(parent, location);
+    if (location->left != NULL && location->right != NULL)
+        case_c(parent, location);
+    free(location);
+}
+
+
+
+
 void working_insert()
 {
     do
