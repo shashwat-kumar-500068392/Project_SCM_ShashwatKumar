@@ -606,6 +606,84 @@ void linked_list()
 
 
 
+void doubly_linked_list()
+{
+    int choice, element, position;
+
+    while (1)
+    {
+        cout<<endl<<"----------------------------"<<endl;
+        cout<<endl<<"Operations on Doubly linked list"<<endl;
+        cout<<endl<<"----------------------------"<<endl;
+        cout<<endl;
+        cout<<endl;
+        cout<<"1.Create Node"<<endl;
+        cout<<"2.Add at begining"<<endl;
+        cout<<"3.Add after position"<<endl;
+        cout<<"4.Delete"<<endl;
+        cout<<"5.Display"<<endl;
+        cout<<"6.Count"<<endl;
+        cout<<"7.Reverse"<<endl;
+        cout<<"8.Quit"<<endl;
+        cout<<"Enter your choice : ";
+        cin>>choice;
+        switch ( choice )
+        {
+        case 1:
+            cout<<"Enter the element: ";
+            cin>>element;
+            create_list(element);
+            cout<<endl;
+            break;
+        case 2:
+            cout<<"Enter the element: ";
+            cin>>element;
+            add_begin(element);
+            cout<<endl;
+            break;
+        case 3:
+            cout<<"Enter the element: ";
+            cin>>element;
+            cout<<"Insert Element after postion: ";
+            cin>>position;
+            add_after(element, position);
+            cout<<endl;
+            break;
+        case 4:
+            if (start == NULL)
+            {
+                cout<<"List empty,nothing to delete"<<endl;
+                break;
+            }
+            cout<<"Enter the element for deletion: ";
+            cin>>element;
+            delete_element(element);
+            cout<<endl;
+            break;
+        case 5:
+            display_dlist();
+            cout<<endl;
+            break;
+        case 6:
+            count_();
+            break;
+        case 7:
+            if (start == NULL)
+            {
+                cout<<"List empty,nothing to reverse"<<endl;
+                break;
+            }
+            reverse_();
+            cout<<endl;
+            break;
+        case 8:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+}
+
 
 
 
