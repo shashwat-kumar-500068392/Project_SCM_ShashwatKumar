@@ -483,6 +483,173 @@ void delete_element(int value)
 }
 
 
+void find(int item, node_ **par, node_ **loc)
+{
+    node_ *ptr, *ptrsave;
+    if (root == NULL)
+    {
+        *loc = NULL;
+        *par = NULL;
+        return;
+    }
+    if (item == root->info)
+    {
+        *loc = root;
+        *par = NULL;
+        return;
+    }
+    if (item < root->info)
+        ptr = root->left;
+    else
+        ptr = root->right;
+    ptrsave = root;
+    while (ptr != NULL)
+    {
+        if (item == ptr->info)
+        {
+            *loc = ptr;
+            *par = ptrsave;
+            return;
+        }
+        ptrsave = ptr;
+        if (item < ptr->info)
+            ptr = ptr->left;
+	else
+	    ptr = ptr->right;
+    }
+    *loc = NULL;
+    *par = ptrsave;
+}
+
+
+
+
+
+void insert(node_ *tree, node_ *newnode)
+{
+    if (root == NULL)
+    {
+        root = new node_;
+        root->info = newnode->info;
+        root->left = NULL;
+        root->right = NULL;
+        cout<<"Root Node is Added"<<endl;
+        return;
+    }
+    if (tree->info == newnode->info)
+    {
+        cout<<"Element already in the tree"<<endl;
+        return;
+    }
+    if (tree->info > newnode->info)
+    {
+        if (tree->left != NULL)
+        {
+            insert(tree->left, newnode);
+	}
+	else
+	{
+            tree->left = newnode;
+            (tree->left)->left = NULL;
+            (tree->left)->right = NULL;
+            cout<<"Node Added To Left"<<endl;
+            return;
+        }
+    }
+    else
+    {
+        if (tree->right != NULL)
+        {
+            insert(tree->right, newnode);
+        }
+        else
+        {
+            tree->right = newnode;
+            (tree->right)->left = NULL;
+            (tree->right)->right = NULL;
+            cout<<"Node Added To Right"<<endl;
+            return;
+        }
+    }
+}
+
+
+
+
+
+
+void case_a(node_ *par, node_ *loc )
+{
+    if (par == NULL)
+    {
+        root = NULL;
+    }
+    else
+    {
+        if (loc == par->left)
+            par->left = NULL;
+        else
+            par->right = NULL;
+    }
+}
+
+
+
+
+void case_b(node_ *par, node_ *loc)
+{
+    node_ *child;
+    if (loc->left != NULL)
+        child = loc->left;
+    else
+        child = loc->right;
+    if (par == NULL)
+    {
+        root = child;
+    }
+    else
+    {
+        if (loc == par->left)
+            par->left = child;
+        else
+            par->right = child;
+    }
+}
+
+
+
+
+void case_c(node_ *par, node_ *loc)
+{
+    node_ *ptr, *ptrsave, *suc, *parsuc;
+    ptrsave = loc;
+    ptr = loc->right;
+    while (ptr->left != NULL)
+    {
+        ptrsave = ptr;
+        ptr = ptr->left;
+    }
+    suc = ptr;
+    parsuc = ptrsave;
+    if (suc->left == NULL && suc->right == NULL)
+        case_a(parsuc, suc);
+    else
+        case_b(parsuc, suc);
+    if (par == NULL)
+    {
+        root = suc;
+    }
+    else
+    {
+        if (loc == par->left)
+            par->left = suc;
+        else
+            par->right = suc;
+    }
+    suc->left = loc->left;
+    suc->right = loc->right;
+}
+
 
 void working_insert()
 {
