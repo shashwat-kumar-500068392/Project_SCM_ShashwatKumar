@@ -20,6 +20,18 @@ struct node
     struct node *prev;
 }*start;
 
+
+struct node_
+{
+    int info;
+    struct node_ *left;
+    struct node_ *right;
+}*root;
+
+
+
+
+
 void insert_new_node_beg()
 {
     struct Node *new_node = new struct Node();
@@ -189,6 +201,38 @@ int noOfNodes()
     return n;
 }
 
+void count_()
+{
+    struct node *q = start;
+    int cnt = 0;
+    while (q != NULL)
+    {
+        q = q->next;
+        cnt++;
+    }
+    cout<<"Number of elements are: "<<cnt<<endl;
+}
+
+
+void reverse_()
+{
+    struct node *p1, *p2;
+    p1 = start;
+    p2 = p1->next;
+    p1->next = NULL;
+    p1->prev = p2;
+    while (p2 != NULL)
+    {
+        p2->prev = p2->next;
+        p2->next = p1;
+        p1 = p2;
+        p2 = p2->prev;
+    }
+    start = p1;
+    cout<<"List Reversed"<<endl;
+}
+
+
 
 
 
@@ -255,6 +299,7 @@ void add_begin(int value)
 
 
 
+
 void add_after(int value, int pos)
 {
     if (start == NULL)
@@ -292,6 +337,108 @@ void add_after(int value, int pos)
     }
     cout<<"Element Inserted"<<endl;
 }
+
+
+
+
+
+
+
+
+void display_dlist()
+{
+    struct node *q;
+    if (start == NULL)
+    {
+        cout<<"List empty,nothing to display"<<endl;
+        return;
+    }
+    q = start;
+    cout<<"The Doubly Link List is :"<<endl;
+    while (q != NULL)
+    {
+        cout<<q->info<<" <-> ";
+        q = q->next;
+    }
+    cout<<"NULL"<<endl;
+}
+
+void add_after(int value, int pos)
+{
+    if (start == NULL)
+    {
+        cout<<"First Create the list."<<endl;
+        return;
+    }
+    struct node *tmp, *q;
+    int i;
+    q = start;
+    for (i = 0;i < pos - 1;i++)
+    {
+        q = q->next;
+        if (q == NULL)
+        {
+            cout<<"There are less than ";
+            cout<<pos<<" elements."<<endl;
+            return;
+        }
+    }
+    tmp = new(struct node);
+    tmp->info = value;
+    if (q->next == NULL)
+    {
+        q->next = tmp;
+        tmp->next = NULL;
+        tmp->prev = q;
+    }
+    else
+    {
+        tmp->next = q->next;
+        tmp->next->prev = tmp;
+        q->next = tmp;
+        tmp->prev = q;
+    }
+    cout<<"Element Inserted"<<endl;
+}
+
+void add_after(int value, int pos)
+{
+    if (start == NULL)
+    {
+        cout<<"First Create the list."<<endl;
+        return;
+    }
+    struct node *tmp, *q;
+    int i;
+    q = start;
+    for (i = 0;i < pos - 1;i++)
+    {
+        q = q->next;
+        if (q == NULL)
+        {
+            cout<<"There are less than ";
+            cout<<pos<<" elements."<<endl;
+            return;
+        }
+    }
+    tmp = new(struct node);
+    tmp->info = value;
+    if (q->next == NULL)
+    {
+        q->next = tmp;
+        tmp->next = NULL;
+        tmp->prev = q;
+    }
+    else
+    {
+        tmp->next = q->next;
+        tmp->next->prev = tmp;
+        q->next = tmp;
+        tmp->prev = q;
+    }
+    cout<<"Element Inserted"<<endl;
+}
+
 
 
 
@@ -515,11 +662,91 @@ void linked_list()
 
 
 
+void doubly_linked_list()
+{
+    int choice, element, position;
+
+    while (1)
+    {
+        cout<<endl<<"----------------------------"<<endl;
+        cout<<endl<<"Operations on Doubly linked list"<<endl;
+        cout<<endl<<"----------------------------"<<endl;
+        cout<<endl;
+        cout<<endl;
+        cout<<"1.Create Node"<<endl;
+        cout<<"2.Add at begining"<<endl;
+        cout<<"3.Add after position"<<endl;
+        cout<<"4.Delete"<<endl;
+        cout<<"5.Display"<<endl;
+        cout<<"6.Count"<<endl;
+        cout<<"7.Reverse"<<endl;
+        cout<<"8.Quit"<<endl;
+        cout<<"Enter your choice : ";
+        cin>>choice;
+        switch ( choice )
+        {
+        case 1:
+            cout<<"Enter the element: ";
+            cin>>element;
+            create_list(element);
+            cout<<endl;
+            break;
+        case 2:
+            cout<<"Enter the element: ";
+            cin>>element;
+            add_begin(element);
+            cout<<endl;
+            break;
+        case 3:
+            cout<<"Enter the element: ";
+            cin>>element;
+            cout<<"Insert Element after postion: ";
+            cin>>position;
+            add_after(element, position);
+            cout<<endl;
+            break;
+        case 4:
+            if (start == NULL)
+            {
+                cout<<"List empty,nothing to delete"<<endl;
+                break;
+            }
+            cout<<"Enter the element for deletion: ";
+            cin>>element;
+            delete_element(element);
+            cout<<endl;
+            break;
+        case 5:
+            display_dlist();
+            cout<<endl;
+            break;
+        case 6:
+            count_();
+            break;
+        case 7:
+            if (start == NULL)
+            {
+                cout<<"List empty,nothing to reverse"<<endl;
+                break;
+            }
+            reverse_();
+            cout<<endl;
+            break;
+        case 8:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+}
+
 
 
 
 int main()
 {
+
 	cout<<endl;
+
 	return 0;
 }
