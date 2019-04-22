@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+
 
 using namespace std;
 
@@ -21,13 +23,13 @@ struct node
 }*start;
 
 
+
 struct node_
 {
     int info;
     struct node_ *left;
     struct node_ *right;
 }*root;
-
 
 
 
@@ -87,34 +89,6 @@ void insert_new_node_end()
 
 
 
-void display()
-{
-    struct Node *temp;
-    temp=head;
-
-    cout<<"The SAP ID's are :"<<endl;
-    while(temp != NULL)
-    {
-        cout<<temp->sap<<"\t";
-        temp=temp->next;
-    }
-    cout<<endl;
-
-    temp=head;
-    cout<<"The Roll number's are :"<<endl;
-    while(temp != NULL)
-    {
-        cout<<temp->rollno<<"\t";
-        temp=temp->next;
-    }
-
-    cout<<endl;
-
-}
-
-
-
-
 int noOfNodes()
 {
     struct Node *temp;
@@ -127,8 +101,6 @@ int noOfNodes()
     }
     return n;
 }
-
-
 
 
 
@@ -186,52 +158,29 @@ void delete_pos()
 
 }
 
-
-
-int noOfNodes()
+void display()
 {
     struct Node *temp;
     temp=head;
-    int n=0;
+
+    cout<<"The SAP ID's are :"<<endl;
     while(temp != NULL)
     {
+        cout<<temp->sap<<"\t";
         temp=temp->next;
-        n=n+1;
     }
-    return n;
-}
+    cout<<endl;
 
-void count_()
-{
-    struct node *q = start;
-    int cnt = 0;
-    while (q != NULL)
+    temp=head;
+    cout<<"The Roll number's are :"<<endl;
+    while(temp != NULL)
     {
-        q = q->next;
-        cnt++;
+        cout<<temp->rollno<<"\t";
+        temp=temp->next;
     }
-    cout<<"Number of elements are: "<<cnt<<endl;
+    cout<<endl;
+
 }
-
-
-void reverse_()
-{
-    struct node *p1, *p2;
-    p1 = start;
-    p2 = p1->next;
-    p1->next = NULL;
-    p1->prev = p2;
-    while (p2 != NULL)
-    {
-        p2->prev = p2->next;
-        p2->next = p1;
-        p1 = p2;
-        p2 = p2->prev;
-    }
-    start = p1;
-    cout<<"List Reversed"<<endl;
-}
-
 
 
 
@@ -257,6 +206,7 @@ void sort_list()
 }
 
 
+
 void create_list(int value)
 {
     struct node *s, *temp;
@@ -280,6 +230,7 @@ void create_list(int value)
 
 
 
+
 void add_begin(int value)
 {
     if (start == NULL)
@@ -296,7 +247,6 @@ void add_begin(int value)
     start = temp;
     cout<<"Element Inserted"<<endl;
 }
-
 
 
 
@@ -340,7 +290,45 @@ void add_after(int value, int pos)
 
 
 
-
+void delete_element(int value)
+{
+    struct node *tmp, *q;
+     /*first element deletion*/
+    if (start->info == value)
+    {
+        tmp = start;
+        start = start->next;
+        start->prev = NULL;
+        cout<<"Element Deleted"<<endl;
+        free(tmp);
+        return;
+    }
+    q = start;
+    while (q->next->next != NULL)
+    {
+        /*Element deleted in between*/
+        if (q->next->info == value)
+        {
+            tmp = q->next;
+            q->next = tmp->next;
+            tmp->next->prev = q;
+            cout<<"Element Deleted"<<endl;
+            free(tmp);
+            return;
+        }
+        q = q->next;
+    }
+     /*last element deleted*/
+    if (q->next->info == value)
+    {
+        tmp = q->next;
+        free(tmp);
+        q->next = NULL;
+        cout<<"Element Deleted"<<endl;
+        return;
+    }
+    cout<<"Element "<<value<<" not found"<<endl;
+}
 
 
 
@@ -363,124 +351,46 @@ void display_dlist()
     cout<<"NULL"<<endl;
 }
 
-void add_after(int value, int pos)
-{
-    if (start == NULL)
-    {
-        cout<<"First Create the list."<<endl;
-        return;
-    }
-    struct node *tmp, *q;
-    int i;
-    q = start;
-    for (i = 0;i < pos - 1;i++)
-    {
-        q = q->next;
-        if (q == NULL)
-        {
-            cout<<"There are less than ";
-            cout<<pos<<" elements."<<endl;
-            return;
-        }
-    }
-    tmp = new(struct node);
-    tmp->info = value;
-    if (q->next == NULL)
-    {
-        q->next = tmp;
-        tmp->next = NULL;
-        tmp->prev = q;
-    }
-    else
-    {
-        tmp->next = q->next;
-        tmp->next->prev = tmp;
-        q->next = tmp;
-        tmp->prev = q;
-    }
-    cout<<"Element Inserted"<<endl;
-}
 
-void add_after(int value, int pos)
+
+
+void count_()
 {
-    if (start == NULL)
-    {
-        cout<<"First Create the list."<<endl;
-        return;
-    }
-    struct node *tmp, *q;
-    int i;
-    q = start;
-    for (i = 0;i < pos - 1;i++)
+    struct node *q = start;
+    int cnt = 0;
+    while (q != NULL)
     {
         q = q->next;
-        if (q == NULL)
-        {
-            cout<<"There are less than ";
-            cout<<pos<<" elements."<<endl;
-            return;
-        }
+        cnt++;
     }
-    tmp = new(struct node);
-    tmp->info = value;
-    if (q->next == NULL)
-    {
-        q->next = tmp;
-        tmp->next = NULL;
-        tmp->prev = q;
-    }
-    else
-    {
-        tmp->next = q->next;
-        tmp->next->prev = tmp;
-        q->next = tmp;
-        tmp->prev = q;
-    }
-    cout<<"Element Inserted"<<endl;
+    cout<<"Number of elements are: "<<cnt<<endl;
 }
 
 
 
 
-void delete_element(int value)
+
+void reverse_()
 {
-    struct node *tmp, *q;
-     /first element deletion/
-    if (start->info == value)
+    struct node *p1, *p2;
+    p1 = start;
+    p2 = p1->next;
+    p1->next = NULL;
+    p1->prev = p2;
+    while (p2 != NULL)
     {
-        tmp = start;
-        start = start->next;
-        start->prev = NULL;
-        cout<<"Element Deleted"<<endl;
-        free(tmp);
-        return;
+        p2->prev = p2->next;
+        p2->next = p1;
+        p1 = p2;
+        p2 = p2->prev;
     }
-    q = start;
-    while (q->next->next != NULL)
-    {
-        /Element deleted in between/
-        if (q->next->info == value)
-        {
-            tmp = q->next;
-            q->next = tmp->next;
-            tmp->next->prev = q;
-            cout<<"Element Deleted"<<endl;
-            free(tmp);
-            return;
-        }
-        q = q->next;
-    }
-     /last element deleted/
-    if (q->next->info == value)
-    {
-        tmp = q->next;
-        free(tmp);
-        q->next = NULL;
-        cout<<"Element Deleted"<<endl;
-        return;
-    }
-    cout<<"Element "<<value<<" not found"<<endl;
+    start = p1;
+    cout<<"List Reversed"<<endl;
 }
+
+
+
+
 
 
 void find(int item, node_ **par, node_ **loc)
@@ -545,7 +455,7 @@ void insert(node_ *tree, node_ *newnode)
     {
         if (tree->left != NULL)
         {
-            insert(tree->left, newnode);
+            insert(tree->left, newnode);	
 	}
 	else
 	{
@@ -569,10 +479,10 @@ void insert(node_ *tree, node_ *newnode)
             (tree->right)->right = NULL;
             cout<<"Node Added To Right"<<endl;
             return;
-        }
+        }	
     }
 }
-
+ 
 
 
 
@@ -592,7 +502,7 @@ void case_a(node_ *par, node_ *loc )
             par->right = NULL;
     }
 }
-
+ 
 
 
 
@@ -615,7 +525,7 @@ void case_b(node_ *par, node_ *loc)
             par->right = child;
     }
 }
-
+ 
 
 
 
@@ -649,6 +559,9 @@ void case_c(node_ *par, node_ *loc)
     suc->left = loc->left;
     suc->right = loc->right;
 }
+ 
+
+
 
 
 void preorder(node_ *ptr)
@@ -684,7 +597,7 @@ void inorder(node_ *ptr)
         inorder(ptr->right);
     }
 }
-
+ 
 
 
 void postorder(node_ *ptr)
@@ -701,12 +614,12 @@ void postorder(node_ *ptr)
         cout<<ptr->info<<"  ";
     }
 }
+ 
 
 
 
 
-
-void display_(node *ptr, int level)
+void display__(node_ *ptr, int level)
 {
     int i;
     if (ptr != NULL)
@@ -751,6 +664,7 @@ void del(int item)
         case_c(parent, location);
     free(location);
 }
+
 
 
 
@@ -886,13 +800,13 @@ void working_extra()
 }
 
 
-
-
-
-
-
 void linked_list()
 {
+    cout<<endl<<"----------------------------"<<endl;
+    cout<<endl<<"Operations on Singly linked list"<<endl;
+    cout<<endl<<"----------------------------"<<endl;
+    cout<<endl;
+    cout<<endl;
     do
     {
         cout<<"Give a numeric input according to the following scheme"<<endl;
@@ -1128,12 +1042,9 @@ void ask_choice()
 
 
 
-
-
-
 int main()
 {
-	ask_choice();
-
-	return 0;
+    ask_choice();
+    return 0;
 }
+
