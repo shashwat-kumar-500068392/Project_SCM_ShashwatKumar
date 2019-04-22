@@ -1014,10 +1014,126 @@ void doubly_linked_list()
 
 
 
+
+
+void binary_search_tree()
+{
+	int choice, num;
+    
+    node_ *temp;
+    while (1)
+    {
+        cout<<"-----------------"<<endl;
+        cout<<"Operations on BST"<<endl;
+        cout<<"-----------------"<<endl;
+        cout<<"1.Insert Element "<<endl;
+        cout<<"2.Delete Element "<<endl;
+        cout<<"3.Inorder Traversal"<<endl;
+        cout<<"4.Preorder Traversal"<<endl;
+        cout<<"5.Postorder Traversal"<<endl;
+        cout<<"6.Display"<<endl;
+        cout<<"7.Quit"<<endl;
+        cout<<"Enter your choice : ";
+        cin>>choice;
+        switch(choice)
+        {
+        case 1:
+            temp = new node_;
+            cout<<"Enter the number to be inserted : ";
+	    cin>>temp->info;
+            insert(root, temp);
+        case 2:
+            if (root == NULL)
+            {
+                cout<<"Tree is empty, nothing to delete"<<endl;
+                continue;
+            }
+            cout<<"Enter the number to be deleted : ";
+            cin>>num;
+            del(num);
+            break;
+        case 3:
+            cout<<"Inorder Traversal of BST:"<<endl;
+            inorder(root);
+            cout<<endl;
+            break;
+	case 4:
+            cout<<"Preorder Traversal of BST:"<<endl;
+            preorder(root);
+            cout<<endl;
+            break;
+        case 5:
+            cout<<"Postorder Traversal of BST:"<<endl;
+            postorder(root);
+            cout<<endl;
+            break;
+        case 6:
+            cout<<"Display BST:"<<endl;
+            display__(root,1);
+            cout<<endl;
+            break;
+        case 7:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+}
+
+
+
+
+
+
+
+void ask_choice()
+{
+    do
+    {
+        cout<<"Give a numeric input according to the following scheme"<<endl;
+        cout<<"1  : to use singly linked list"<<endl;
+        cout<<"2  : to use doubly linked list"<<endl;
+        cout<<"3  : to use binary search tree"<<endl;
+        cout<<"4  : to exit"<<endl;
+
+
+        int input=0;
+        cin>>input;
+        cout<<"\n\n"<<endl;
+
+
+        while(input<1 || input>4)
+        {
+            cout<<"Kindly input a valid choice :"<<endl;
+            cin>>input;
+        }
+
+        switch(input)
+        {
+            case 1: linked_list();
+            break;
+
+            case 2: doubly_linked_list();
+            break;
+            
+            case 3: binary_search_tree();
+            break;
+
+            case 4: cout<<"exiting"<<endl;
+            return;
+        }  
+
+    }while(1);
+}
+
+
+
+
+
+
 int main()
 {
-
-	cout<<endl;
+	ask_choice();
 
 	return 0;
 }
