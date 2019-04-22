@@ -340,8 +340,540 @@ Total 4 (delta 0), reused 0 (delta 0)
 To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
    6dcd908..e2f86bb  master -> master
 
+500068392@upes-500068392 MINGW64 ~
+$ cd D:
+
+500068392@upes-500068392 MINGW64 /d
+$ cd Project_SCM-ShashwatKumar
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 15 (delta 5), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+   2c754f2..6c9a119  master     -> origin/master
+Updating 2c754f2..6c9a119
+Fast-forward
+ project.cpp | 189 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 189 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add .
+warning: LF will be replaced by CRLF in log.txt.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git reset HEAD log.txt
+Unstaged changes after reset:
+M       log.txt
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m"Changed int main to initiate program at linked_list()"
+[master 64281d7] Changed int main to initiate program at linked_list()
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 385 bytes | 96.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   6c9a119..64281d7  master -> master
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git branch shashwat
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git checkout shashwat
+Switched to branch 'shashwat'
+M       log.txt
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (shashwat)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (shashwat)
+$ git add project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (shashwat)
+$ git commit -m"Changed int main to initiate program at doubly_linked_list()"
+[shashwat 66b367b] Changed int main to initiate program at doubly_linked_list()
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (shashwat)
+$ git push origin shashwat
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 376 bytes | 125.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'shashwat' on GitHub by visiting:
+remote:      https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar/pull/new/shashwat
+remote:
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+ * [new branch]      shashwat -> shashwat
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (shashwat)
+$ git checkout master
+Switched to branch 'master'
+M       log.txt
+Your branch is up to date with 'origin/master'.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m"Changed int main. Application does not start on its own. New function call will be added later"
+[master ee785c1] Changed int main. Application does not start on its own. New function call will be added later
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 405 bytes | 202.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   64281d7..ee785c1  master -> master
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git merge shashwat
+Auto-merging project.cpp
+CONFLICT (content): Merge conflict in project.cpp
+Automatic merge failed; fix conflicts and then commit the result.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ gut rebase shashwat
+bash: gut: command not found
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git rebase shashwat
+project.cpp: needs merge
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   project.cpp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git commit -m"Changed int main. Application does not start on its own. New function call will be added later"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git merge --no-f shashwat
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git add .
+warning: LF will be replaced by CRLF in log.txt.
+The file will have its original line endings in your working directory
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git merge --no-ff shashwat
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git pull origin master
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git merge MERGE_HEAD
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git commit -m "merging"
+[master 4052840] merging
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git merge MERGE_HEAD
+merge: MERGE_HEAD - not something we can merge
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+Unpacking objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+   ee785c1..a1be412  master     -> origin/master
+Auto-merging project.cpp
+CONFLICT (content): Merge conflict in project.cpp
+Automatic merge failed; fix conflicts and then commit the result.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git push origin master
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git pull origin master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master|MERGING)
+$ git reset --hard HEAD~
+HEAD is now at ee785c1 Changed int main. Application does not start on its own. New function call will be added later
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+Updating ee785c1..a1be412
+Fast-forward
+ project.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin maaster
+error: src refspec maaster does not match any.
+error: failed to push some refs to 'https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git'
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Everything up-to-date
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git log --oneline --graph
+*   a1be412 (HEAD -> master, origin/master) Merge pull request #6 from shashwat-kumar-500068392/shashwat
+|\
+| *   cb9bb3a Merge branch 'master' into shashwat
+| |\
+| |/
+|/|
+* | ee785c1 Changed int main. Application does not start on its own. New function call will be added later
+| * 66b367b (origin/shashwat, shashwat) Changed int main to initiate program at doubly_linked_list()
+|/
+* 64281d7 Changed int main to initiate program at linked_list()
+* 6c9a119 Added function doubly_linked_list()
+*   04e04d9 Merge pull request #5 from lalshrikant12/shrikant
+|\
+| * 9f530dd added functions reverse_() and count_() --shrikant
+* | 573db2d void delete_element() added -- nitish
+* | bece676 create_list(),add_begin() and add_after() functions added -- nitish
+* |   2c754f2 Merge branch 'master' of https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+|\ \
+| * | 75af8c9 create_list(),add_begin() and add_after() functions added -- nitis
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git log --oneline
+a1be412 (HEAD -> master, origin/master) Merge pull request #6 from shashwat-kumar-500068392/shashwat
+cb9bb3a Merge branch 'master' into shashwat
+ee785c1 Changed int main. Application does not start on its own. New function call will be added later
+66b367b (origin/shashwat, shashwat) Changed int main to initiate program at doubly_linked_list()
+64281d7 Changed int main to initiate program at linked_list()
+6c9a119 Added function doubly_linked_list()
+04e04d9 Merge pull request #5 from lalshrikant12/shrikant
+9f530dd added functions reverse_() and count_() --shrikant
+573db2d void delete_element() added -- nitish
+bece676 create_list(),add_begin() and add_after() functions added -- nitish
+2c754f2 Merge branch 'master' of https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+34b5e62 Function void display_list() added
+75af8c9 create_list(),add_begin() and add_after() functions added -- nitish
+59d7da1 Merge pull request #2 from shashwat-kumar-500068392/nitish
+19f2a1c struct node added -- nitish
+815b759 function linked_list() added
+e2f86bb functions working_insert(), workiing_delete() and working_extra() added
+6dcd908 Merge pull request #1 from lalshrikant12/shrikant
+97c0b0e added void sort_list() and noOfNodes() functions --shrikant
+
+
+500068392@upes-500068392 MINGW64 ~
+$ cd D:
+
+500068392@upes-500068392 MINGW64 /d
+$ $ cd Project_SCM-ShashwatKumar
+bash: $: command not found
+
+500068392@upes-500068392 MINGW64 /d
+$ $ cd Project_SCM-ShashwatKumar
+bash: $: command not found
+
+500068392@upes-500068392 MINGW64 /d
+$ cd Project_SCM-ShashwatKumar
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Added struct node_ for binary search tree"
+[master f67d158] Added struct node_ for binary search tree
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 12 insertions(+)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes | 99.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   a1be412..f67d158  master -> master
+
+500068392@upes-500068392 MINGW64 /d
+$ cd Project_SCM-ShashwatKumar
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 17 (delta 5), reused 11 (delta 4), pack-reused 0
+Unpacking objects: 100% (17/17), done.
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+   f67d158..192a7db  master     -> origin/master
+Updating f67d158..192a7db
+Fast-forward
+ project.cpp | 317 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 316 insertions(+), 1 deletion(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "added functions binary_search_tree() and ask_choice()"
+[master 872f897] added functions binary_search_tree() and ask_choice()
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 118 insertions(+), 2 deletions(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 942 bytes | 314.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   192a7db..872f897  master -> master
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ vi project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git add project.cpp
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git commit -m "Corrections made to the final program"
+[master e3df683] Corrections made to the final program
+ Committer: SHASHWAT KUMAR <500068392@DDN.UPES.AC.IN>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 101 insertions(+), 190 deletions(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 678 bytes | 169.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar.git
+   872f897..e3df683  master -> master
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/shashwat-kumar-500068392/Project_SCM_ShashwatKumar
+ * branch            master     -> FETCH_HEAD
+   e3df683..29941d1  master     -> origin/master
+Updating e3df683..29941d1
+Fast-forward
+ project.cpp | 42 ++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 40 insertions(+), 2 deletions(-)
+
+500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
+$ git log --oneline --graph
+* 29941d1 (HEAD -> master, origin/master) Update project.cpp
+* e3df683 Corrections made to the final program
+* 872f897 added functions binary_search_tree() and ask_choice()
+*   192a7db Merge pull request #9 from shashwat-kumar-500068392/shrikant
+|\
+| * 4e9a31c functions added preoroder() postorder() del() inorder() display_() --shrikant
+|/
+* 131d5df added functions void find(),void insert(),void case_a(),void case_b(),void case_c() -- nitish
+*   9a5ce5e Merge pull request #7 from shashwat-kumar-500068392/nitish
+|\
+| *   9673587 Merge branch 'master' into nitish
+| |\
+| |/
+|/|
+* | f67d158 Added struct node_ for binary search tree
+* |   a1be412 Merge pull request #6 from shashwat-kumar-500068392/shashwat
+|\ \
+| * \   cb9bb3a Merge branch 'master' into shashwat
+| |\ \
+| |/ /
+|/| |
+
 500068392@upes-500068392 MINGW64 /d/Project_SCM-ShashwatKumar (master)
 $
-
-
 
