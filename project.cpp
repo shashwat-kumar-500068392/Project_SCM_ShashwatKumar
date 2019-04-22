@@ -20,6 +20,18 @@ struct node
     struct node *prev;
 }*start;
 
+
+struct node_
+{
+    int info;
+    struct node_ *left;
+    struct node_ *right;
+}*root;
+
+
+
+
+
 void insert_new_node_beg()
 {
     struct Node *new_node = new struct Node();
