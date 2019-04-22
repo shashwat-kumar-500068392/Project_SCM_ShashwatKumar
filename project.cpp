@@ -689,6 +689,8 @@ void doubly_linked_list()
 
 int main()
 {
+
 	cout<<endl;
+
 	return 0;
 }
