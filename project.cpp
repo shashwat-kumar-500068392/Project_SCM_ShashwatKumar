@@ -988,7 +988,7 @@ void working_extra()
 
 
 /*
-Intermediate function calling functions implementing singly linked list start here
+Intermediate function calling functions implementing singly linked list starts here
 */
 
 void linked_list()
@@ -1038,7 +1038,7 @@ void linked_list()
 
 
 /*
-Intermediate function calling functions implementing doubly linked list start here
+Intermediate function calling functions implementing doubly linked list starts here
 */
 
 
@@ -1123,7 +1123,7 @@ void doubly_linked_list()
 
 
 /*
-Intermediate function calling functions implementing binary search tree start here
+Intermediate function calling functions implementing binary search tree starts here
 */
 
 
